@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/s_style.css">
+<!-- 	<script type="text/javascript" src="js/Modal.js"></script>
+ -->	<link href='https://fonts.googleapis.com/css?family=Cairo' rel='stylesheet'>
+	<title></title>
+	<script type="text/javascript">
+(function(window, document, undefined){
+
+// code that should be taken care of right away
+
+window.onload = init;
+
+  function init(){
+  	var el = document.getElementById('Quiz');
+	console.log(el)
+	   el.addEventListener('click',
+  	function() {
+ 	document.getElementById('bg-modal').style.display = "flex";
+	});
+
+	var e = document.getElementById('close');
+	if(e){
+ 	 e.addEventListener('click',
+  	function() {
+	document.getElementById('bg-modal').style.display = "none";
+});
+}
+    // the code to be called when the dom has loaded
+    // #document has its nodes
+  }
+ 
+})(window, document, undefined);
+    </script>
+</head>
+
+<body>
+ 	
+<header>
+	<div class="head1">
+		<img src="">
+		<h3>اسم امشروع</h3>
+		<div class="navbar1">
+		<ul>
+  <li><a href="home.html">الرئيسية</a></li>
+  <li><a href="">تواصل معنا</a></li>
+  <li><a href="popularstories.html">جميع القصص</a></li>
+  
+</ul></div>
+	<form action="login.html" >
+    <input  id="log-in" type="submit" value="تسجيل الدخول " />
+   </form>
+<!-- 	<button id="log-in" >تسجيل الدخول</button>
+ -->	</div>
+	<div class="head2">
+		<div class="navbar2">
+		<ul>
+  <li><a href="default.asp">مغامرات</a></li>
+  <li><a href="contact.asp">تعليمية</a></li>
+  <li><a href="news.asp">حيوانات</a></li>
+    <li><a href="default.asp">إنجليزية</a></li>
+    <li><a href="contact.asp">فكاهة</a></li>
+  <li><a href="news.asp">دينية</a></li>
+  <li><a href="about.asp">مشاركات الأصدقاء</a></li>
+</ul></div>
+		
+	</div>
+	
+</header>
+
+
+
+	<section>
+		<div class="storyy" >
+		<div class="steps-img">
+		<img id="steps "src="./img/story.png"></div>
+		<div class="steps-txt">
+			<p> سجل دخول لتنضم الى ع </p>
+			<p> خذ جولة في عالمنا  </p>
+			<p>اختر القصة التي تعجبك  </p>
+			<p>تمتع بالاستماع إليها </p>
+		</div>
+
+
+		<div class="story">
+			<h2 class="s-title">بياض الثلج</h2>
+			<div class="views">
+				<p class="title">عدد  المشاهدات :</p>
+			<p class="views-num">20</p>
+		</div>
+			<div class="rating">
+				<p class="title">التقييم:</p>
+			<p class="rating-num">4.0</p>
+		</div>
+
+
+			<p class="story-txt"> دت الصغيرة المسكينة نفسها وحيدةً في الغابة، وكانت خائفةً من الأشجار الكثيفة، كما هابت هجوم الحيوانات المفترسة عليها، ولم يكن منها إلا أن بدأت بالركض فوق الحصى الحاد والصخور المدبّبة، وبين الغصون والأشواك، كما أن حيوانات بريّة أخذت تقفز حولها من هنا وهناك ولكن دون أن تؤذيها، فأطلقت بياض الثلج ساقيها للريح راكضةً بأسرع ما تستطيع، وبقيت هكذا إلى أن اقترب حلول المساء، وعندئذٍ رأت بياض الثلج كوخاً صغيراً، فقرّرت أن تدخله لتأخذ قسطاً من الراحة.[٤] سرعان ما لفت انتباه بياض الثلج الحجم الصغير لكل شيءٍ في الكوخ، فالملاعق والكؤوس والأواني والأثاث كلّها كانت صغيرة، وفي الوقت نفسه كانت مرتّبةً ونظيفًة أيُّما ترتيب ونظافة. وعلى الطاولة في المطبخ وُضعت سبعة صحون، على كل صحنٍ منها ملعقةٌ صغيرةٌ وسكينٌ وشوكةٌ، بالإضافة إلى سبعة أكوابٍ؛ كل كوب منها وضع بشكل مرتّب إلى جانب صحن. وفي الجهة المقابلة للمطبخ، كانت هناك سبعة أسرّةٍ صغيرةٍ تصطفّ إلى جانب الحائط مغطّاةٌ بشراشف ناصعة البياض.[١] كانت بياض الثلج في تلك اللحظة تتضور جوعاً وعطشاً، فلم تقاوم منظر ورائحة الخبز والخضار التي في الصحون، فأكلت منها قليلاً، وشربت عصير العنب؛ رشفةً من كل كوب، ثم ألقت بنف</p>
+			<button id="Quiz" class="button">قم بتقديم اختبار</button>
+		</div>
+
+		<div class="video">
+			<video class="story-vid"></video>
+			
+		</div>
+</div>
+	</section>
+
+				<!-- Modal section -->
+		<div id="bg-modal">
+	<div class="modal-contents">
+
+	<div class="Quiz-page">
+			<title>اختبار قصير </title>
+			<div class="first-qus"> من هى الشخصية الرئيسية 
+			<div class="section1">
+			<button id="option1" value="وليد">وليد</button>
+			<button id="option2" value="وليد">نور</button>
+		</div>
+			<div class="section2">
+			<button id="option3" value="وليد">هيا</button>
+			<button id="option4" value="وليد">ندى</button>
+		</div>	
+			</div>
+			
+			<div class="sec-qus"> من هى الشخصية الرئيسية 
+			<button id="option1" value="وليد">وليد</button>
+			<button id="option2" value="وليد">نور</button>
+			<button id="option3" value="وليد">هيا</button>
+			<button id="option4" value="وليد">ندى</button>
+			</div>
+			</div>
+			<div class="save">
+			<button id="save-answers">تسليم الاجابات </button>
+			</div>
+
+			
+		<div id="close">+</div>
+ 
+		<form action="">
+ 
+		</form>
+
+
+
+	</div>
+</div>
+
+
+
+</body>
+</html>
