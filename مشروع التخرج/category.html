@@ -19,57 +19,68 @@
                     {
                         title: 'Tiger',
                         type: 'animals',
-
+                        image: 'https://static01.nyt.com/images/2019/05/07/science/06SCI-TIGER1/03SCI-TIGER1-superJumbo.jpg'
                     },
                     {
                         title: 'Cat',
                         type: 'animals',
+                        image: 'https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png'
 
                     }, {
                         title: 'Lion',
                         type: 'animals',
+                        image: 'https://i.pinimg.com/originals/1c/2f/52/1c2f52962906d49ee2c3359a23de64e1.jpg'
+
 
                     }, {
-                        title: 'Going to see',
+                        title: 'Going to sea',
                         type: 'adventure',
+                        image: 'https://jooinn.com/images/sea-136.jpg'
 
                     },
                     {
                         title: 'Fight the sharks',
                         type: 'adventure',
+                        image: 'https://media.npr.org/assets/img/2020/08/13/gettyimages-173288562_wide-46c4fa466f2ea7bed1615ef893500b9aa3b8d100.jpg?s=1400'
 
                     },
                     {
                         title: 'Under the center of the earth',
                         type: 'adventure',
-
+                        image: 'https://i.pinimg.com/originals/aa/5a/31/aa5a31ceeaa04ec91e3a2de2d5f0a6b8.jpg'
                     },
                     {
                         title: 'How to pray',
                         type: 'deen',
+                        image: 'https://ihopeministries.org/wp-content/uploads/2019/05/manywomenpraying.jpg'
 
                     },
                     {
                         title: 'Knowing God',
                         type: 'deen',
+                        image: 'https://cdn-prod.opendemocracy.net/media/images/Mohammed_kaaba_1315.width-800.jpg'
 
                     }, {
                         title: 'Prophet Mohammed ',
                         type: 'deen',
+                        image: 'https://cdn-prod.opendemocracy.net/media/images/Mohammed_kaaba_1315.width-800.jpg'
 
                     },
                     {
                         title: 'Lets eat',
                         type: 'fun',
+                        image: 'https://guneykoresinemasi.com/uploads/fotos/diziler/lets-eat/filmafisi.jpg'
 
                     },
                     {
                         title: 'The Lemon Tree',
                         type: 'fun',
+                        image: 'https://img.freepik.com/free-photo/bunch-fresh-ripe-lemons-lemon-tree_129475-22.jpg?size=626&ext=jpg'
 
                     }, {
                         title: 'The Sleeping boy',
                         type: 'fun',
+                        image: 'https://previews.123rf.com/images/wetnose/wetnose1303/wetnose130300013/18737588-boy-sleeping.jpg'
 
                     },
                 ]
@@ -79,7 +90,7 @@
                     if (element) {
                         element.insertAdjacentHTML("beforeend",
                             `<div class="story-card">
-                        <img src="" />
+                        <img src=${el.image} />
                         <div class="cat-txt">
                             <h4 class="title-s">${el.title} </h4>
                             <div class="rating">
