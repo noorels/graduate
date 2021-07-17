@@ -17,67 +17,87 @@
                 const params = Object.fromEntries(urlSearchParams.entries());
                 const sotries = [
                     {
+                        id: "1",
                         title: 'Tiger',
                         type: 'animals',
                         image: 'https://static01.nyt.com/images/2019/05/07/science/06SCI-TIGER1/03SCI-TIGER1-superJumbo.jpg'
                     },
                     {
+                        id: "2",
                         title: 'Cat',
                         type: 'animals',
                         image: 'https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png'
 
                     }, {
+                        id: "3",
+
                         title: 'Lion',
                         type: 'animals',
                         image: 'https://i.pinimg.com/originals/1c/2f/52/1c2f52962906d49ee2c3359a23de64e1.jpg'
 
 
                     }, {
+                        id: "4",
+
                         title: 'Going to sea',
                         type: 'adventure',
                         image: 'https://jooinn.com/images/sea-136.jpg'
 
                     },
                     {
+                        id: "5",
+
                         title: 'Fight the sharks',
                         type: 'adventure',
                         image: 'https://media.npr.org/assets/img/2020/08/13/gettyimages-173288562_wide-46c4fa466f2ea7bed1615ef893500b9aa3b8d100.jpg?s=1400'
 
                     },
                     {
+                        id: "6",
+
                         title: 'Under the center of the earth',
                         type: 'adventure',
                         image: 'https://i.pinimg.com/originals/aa/5a/31/aa5a31ceeaa04ec91e3a2de2d5f0a6b8.jpg'
                     },
                     {
+                        id: "7",
+
                         title: 'How to pray',
                         type: 'deen',
                         image: 'https://ihopeministries.org/wp-content/uploads/2019/05/manywomenpraying.jpg'
 
                     },
                     {
+                        id: "8",
+
                         title: 'Knowing God',
                         type: 'deen',
                         image: 'https://cdn-prod.opendemocracy.net/media/images/Mohammed_kaaba_1315.width-800.jpg'
 
                     }, {
+                        id: "9",
+
                         title: 'Prophet Mohammed ',
                         type: 'deen',
                         image: 'https://cdn-prod.opendemocracy.net/media/images/Mohammed_kaaba_1315.width-800.jpg'
 
                     },
                     {
+                        id: "10",
                         title: 'Lets eat',
                         type: 'fun',
                         image: 'https://guneykoresinemasi.com/uploads/fotos/diziler/lets-eat/filmafisi.jpg'
 
                     },
                     {
+                        id: "11",
+
                         title: 'The Lemon Tree',
                         type: 'fun',
                         image: 'https://img.freepik.com/free-photo/bunch-fresh-ripe-lemons-lemon-tree_129475-22.jpg?size=626&ext=jpg'
 
                     }, {
+                        id: "12",
                         title: 'The Sleeping boy',
                         type: 'fun',
                         image: 'https://previews.123rf.com/images/wetnose/wetnose1303/wetnose130300013/18737588-boy-sleeping.jpg'
@@ -86,7 +106,6 @@
                 ]
                 const filteredStories = sotries.filter(story => story.type === params.category).forEach(el => {
                     const element = document.getElementById('story-cards')
-                    console.log(element);
                     if (element) {
                         element.insertAdjacentHTML("beforeend",
                             `<div class="story-card">
@@ -94,21 +113,20 @@
                         <div class="cat-txt">
                             <h4 class="title-s">${el.title} </h4>
                             <div class="rating">
-                                <h4> 4.5</h4>
+                                <h4>4.5</h4>
                                 <img src="" />
                             </div>
                         </div>
                         <p class="description-s">دت الصغيرة المسكينة نفسها وحيدةً في الغابة، وكانة نفسها وحيدةً في الغابة،
                             وكانت خائفة نفسها وحيدةً في الغابة، وكانت خائفة نفسها وحيدةً في الغابة، وكانت خائفت خائفةً من
                             الأشجار الكثيفة، كما </p>
-                        <form action="story.html" class="view">
-                            <input type="submit" name="watch" value="مشاهدة" />
-                        </form>
-                    </div>`
+                            <a href=${'story.html?id=' + el.id} class="view" >
+                        <input type="submit" name="watch" value="مشاهدة" />
+                                </a >
+                    </div >`
                         )
                     }
                 })
-                console.log(filteredStories);
             }
 
         })(window, document, undefined);
@@ -163,41 +181,6 @@
         <div class="section2">
             <h2>مجموعة القصص</h2>
             <div class="story-cards" id='story-cards'>
-                <div class="story-card">
-                    <img src="" />
-                    <div class="cat-txt">
-                        <h4 class="title-s">ياض الثلج </h4>
-                        <div class="rating">
-                            <h4> 4.5</h4>
-                            <img src="" />
-                        </div>
-                    </div>
-                    <p class="description-s">دت الصغيرة المسكينة نفسها وحيدةً في الغابة، وكانة نفسها وحيدةً في الغابة،
-                        وكانت خائفة نفسها وحيدةً في الغابة، وكانت خائفة نفسها وحيدةً في الغابة، وكانت خائفت خائفةً من
-                        الأشجار الكثيفة، كما </p>
-                    <form action="story.html" class="view">
-                        <input type="submit" name="watch" value="مشاهدة" />
-                    </form>
-                    <!-- <button class="view">مشاهدة</button> -->
-
-                </div>
-                <div class="story-card">
-                    <img src="">
-                    <div class="cat-txt">
-                        <h4 class="title-s">ياض الثلج </h4>
-                        <div class="rating">
-                            <h4> 4.5</h4>
-                            <img src="">
-                        </div>
-                    </div>
-                    <p class="description-s">دت الصغيرة المسكينة نفسها وحيدةً في الغابة، وكانة نفسها وحيدةً في الغابة،
-                        وكانت خائفة نفسها وحيدةً في الغابة، وكانت خائفة نفسها وحيدةً في الغابة، وكانت خائفت خائفةً من
-                        الأشجار الكثيفة، كما </p>
-                    <form action="story.html" class="view">
-                        <input type="submit" name="watch" value="مشاهدة" />
-                    </form>
-                    <!-- <button class="view">مشاهدة</button> -->
-                </div>
             </div>
     </section>
 </body>

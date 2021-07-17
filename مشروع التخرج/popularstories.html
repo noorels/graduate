@@ -1,343 +1,497 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta charset="utf-8">
-	<title></title>
-	<style type="text/css">
-  @font-face {
-    font-family: Cairo;
-    src: url(https://fonts.google.com/specimen/Cairo?subset=arabic);
-  }
-  header{
-  width: 100%;
-  height: auto;
-  display: block;
-  padding-top: 1%;
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/c_style.css">
+    <style type="text/css">
+        @font-face {
+            font-family: Cairo;
+            src: url(https://fonts.google.com/specimen/Cairo?subset=arabic);
+        }
+
+        header {
+            width: 100%;
+            height: auto;
+            display: block;
+            padding-top: 1%;
 
 
-}
+        }
 
-.head1 h3{
-  float: right;
-  margin: 0px;
-  padding: 0px;
-  margin-top: 10px;
-}
-.head1 img{
-  float: right;
-  margin: 0px;
-  padding: 0px;
-  width: 100px;
-  height: 50px;
-  margin-right: 2%;
-  margin-left: 1%;
-  margin-top: 1%;
-  background-color: #000;
-}
+        .head1 h3 {
+            float: right;
+            margin: 0px;
+            padding: 0px;
+            margin-top: 10px;
+        }
 
-.head1{
-  overflow: hidden;
-  margin-right: 11%;
+        .head1 img {
+            float: right;
+            margin: 0px;
+            padding: 0px;
+            width: 100px;
+            height: 50px;
+            margin-right: 2%;
+            margin-left: 1%;
+            margin-top: 1%;
+            background-color: #000;
+        }
 
-
-}
-
-.head1 ul{
-    list-style-type: none;
-margin: 0px;
-padding: 0px;
-   width: auto;
-   
- 
-}
-.navbar1{
-   margin-right: 10%;
-   overflow: hidden;
-   margin-top: 1.3%;
-   width:35% ;
-   float: right;
+        .head1 {
+            overflow: hidden;
+            margin-right: 11%;
 
 
-}
+        }
 
-.head1 a{
-  font-family:Cairo;
-  float: right;
-  margin-right: 5%;
-    font-size: 16px;
-  color: #121212;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  margin-top: 0px;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-
-  
-}
-
-.head1 a:hover{
-  background-color: #ddd;
-  color: black;
-}
-
-.log-in{
-  font-family:Cairo;
-float: left;
-
-}
+        .head1 ul {
+            list-style-type: none;
+            margin: 0px;
+            padding: 0px;
+            width: auto;
 
 
-#log-in{
-  width: 11.5%;
-  height:7.3% ;
-  background-color:  #FFE7DD;
-  font-size: 16px;
-  color: #F4775C;
-  position: absolute;
-  float: left;
-  border-radius: 25px;
-  font-weight: bold;
-  border-width: 0px;
-  font-family:Cairo;
-  margin-right: 11%;
-  margin-left: 0px;
-  margin-top: 1.3%;
-}
+        }
+
+        .navbar1 {
+            margin-right: 10%;
+            overflow: hidden;
+            margin-top: 1.3%;
+            width: 35%;
+            float: right;
 
 
+        }
+
+        .head1 a {
+            font-family: Cairo;
+            float: right;
+            margin-right: 5%;
+            font-size: 16px;
+            color: #121212;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            margin-top: 0px;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            padding-left: 0px;
 
 
-.head2{
-  overflow: hidden;
-  margin-top:0;
-  margin-right: 10%;
+        }
 
-}
+        .head1 a:hover {
+            background-color: #ddd;
+            color: black;
+        }
 
-.navbar2{
-    font-family:Cairo;
-   margin-right:10%;
-   margin-left: 10%;
-   overflow: hidden;
+        .log-in {
+            font-family: Cairo;
+            float: left;
+
+        }
+
+
+        #log-in {
+            width: 11.5%;
+            height: 7.3%;
+            background-color: #FFE7DD;
+            font-size: 16px;
+            color: #F4775C;
+            position: absolute;
+            float: left;
+            border-radius: 25px;
+            font-weight: bold;
+            border-width: 0px;
+            font-family: Cairo;
+            margin-right: 11%;
+            margin-left: 0px;
+            margin-top: 1.3%;
+        }
 
 
 
-}
 
-.head2 ul{
-    list-style-type: none;
+        .head2 {
+            overflow: hidden;
+            margin-top: 0;
+            margin-right: 10%;
 
-}
+        }
 
-
-.head2 a{
-  float: right;
-    font-size: 16px;
-  color: #121212;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  
-}
-
-.head2 a:hover{
-  background-color: #ddd;
-  color: black;
-}
-
-.firstpart{
-
-margin-left: 60%;
-}
-	.storycard{
-
-  display:inline-block; 
-  float:right;
-  height:250px;
-  width:250px;
-flex-basis: 80%;
-  margin-right:12%;
-  flex-basis: 22%;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-    background-color: #fff;
-    margin-top: 0px;
-    margin-bottom: 5%;
-    box-shadow: -2px 5px 10px #AAAAAA;
-    padding-bottom: 10px;
-    border-radius: 10px;
-}
-#storycardsec{
-margin-right:3%;
-
-}
-
-.storycard img{
-  width: 100%;
-  height: 120px;
-  background-color: #FFF9E2;
-}
-
-.storycard h4{
-   font-size: 12px;
-  color: #363636;
-  margin-top:-20px;
-  margin-bottom: 0px;
-  margin-right: 6%;
- 
-
-}
-
-.storycard p{
-   font-size:10px;
-  color: #363636;
-
-  text-align: right;
-  margin: 10px;
-  margin-top: -8px;
+        .navbar2 {
+            font-family: Cairo;
+            margin-right: 10%;
+            margin-left: 10%;
+            overflow: hidden;
 
 
 
-}
+        }
 
-.title-t{
-  font-size: 16px;
-  margin-right: 2%;
-  margin-top:3.5%;
-  padding-right:10%;
-  text-align: right;
-    font-family: Cairo ;
-}
-#title-tt{
-margin-top:0%;
-}
+        .head2 ul {
+            list-style-type: none;
 
-.cat-txt{
-display:inline-block; 
-  clear: both;
-  width: 100%;
-  margin-top:20px ;
-  margin-bottom:10px ;
-}
-
-.title-s{
-  margin-bottom: 0.2%;
-    font-family:Cairo;
-    text-align: right;
-  }
-.rating{
-  float: left;
-  margin-left: 5%;
-  width: 17%;
- 
+        }
 
 
-}
+        .head2 a {
+            float: right;
+            font-size: 16px;
+            color: #121212;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
 
-.rating h4{
-  float: right;
+        }
+
+        .head2 a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .firstpart {
+
+            margin-left: 60%;
+        }
+
+        .storycard {
+
+            display: inline-block;
+            float: right;
+            height: 250px;
+            width: 250px;
+            flex-basis: 80%;
+            margin-right: 12%;
+            flex-basis: 22%;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            background-color: #fff;
+            margin-top: 0px;
+            margin-bottom: 5%;
+            box-shadow: -2px 5px 10px #AAAAAA;
+            padding-bottom: 10px;
+            border-radius: 10px;
+        }
+
+        #storycardsec {
+            margin-right: 3%;
+
+        }
+
+        .storycard img {
+            width: 100%;
+            height: 120px;
+            background-color: #FFF9E2;
+        }
+
+        .storycard h4 {
+            font-size: 12px;
+            color: #363636;
+            margin-top: -20px;
+            margin-bottom: 0px;
+            margin-right: 6%;
 
 
-}
+        }
 
-.rating img{
-  width: 20px;
-    height: 20px;
-    float: left;
+        .storycard p {
+            font-size: 10px;
+            color: #363636;
 
-}
-.description-s{
-  margin-top:0.2%;
-  padding-top:.2%;
-    font-family: Cairo ;
-
-}
-.secpart{
-float: right;
-margin-right:4%;
+            text-align: right;
+            margin: 10px;
+            margin-top: -8px;
 
 
- } 
-	</style>
+
+        }
+
+        .title-t {
+            font-size: 16px;
+            margin-right: 2%;
+            margin-top: 3.5%;
+            padding-right: 10%;
+            text-align: right;
+            font-family: Cairo;
+        }
+
+        #title-tt {
+            margin-top: 0%;
+        }
+
+        .cat-txt {
+            display: inline-block;
+            clear: both;
+            width: 100%;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .title-s {
+            margin-bottom: 0.2%;
+            font-family: Cairo;
+            text-align: right;
+        }
+
+        .rating {
+            float: left;
+            margin-left: 5%;
+            width: 17%;
 
 
+
+        }
+
+        .rating h4 {
+            float: right;
+
+
+        }
+
+        .rating img {
+            width: 20px;
+            height: 20px;
+            float: left;
+
+        }
+
+        .description-s {
+            margin-top: 0.2%;
+            padding-top: .2%;
+            font-family: Cairo;
+
+        }
+
+        .secpart {
+            float: right;
+            margin-right: 4%;
+
+
+        }
+    </style>
+
+    <script>
+        (function (window, document, undefined) {
+
+            // code that should be taken care of right away
+
+            window.onload = init;
+
+            function init() {
+                const urlSearchParams = new URLSearchParams(window.location.search);
+                const params = Object.fromEntries(urlSearchParams.entries());
+                const sotries = [
+                    {
+                        id: "1",
+                        title: 'Tiger',
+                        type: 'animals',
+                        image: 'https://static01.nyt.com/images/2019/05/07/science/06SCI-TIGER1/03SCI-TIGER1-superJumbo.jpg'
+                    },
+                    {
+                        id: "2",
+                        title: 'Cat',
+                        type: 'animals',
+                        image: 'https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png'
+
+                    }, {
+                        id: "3",
+
+                        title: 'Lion',
+                        type: 'animals',
+                        image: 'https://i.pinimg.com/originals/1c/2f/52/1c2f52962906d49ee2c3359a23de64e1.jpg'
+
+
+                    }, {
+                        id: "4",
+
+                        title: 'Going to sea',
+                        type: 'adventure',
+                        image: 'https://jooinn.com/images/sea-136.jpg'
+
+                    },
+                    {
+                        id: "5",
+
+                        title: 'Fight the sharks',
+                        type: 'adventure',
+                        image: 'https://media.npr.org/assets/img/2020/08/13/gettyimages-173288562_wide-46c4fa466f2ea7bed1615ef893500b9aa3b8d100.jpg?s=1400'
+
+                    },
+                    {
+                        id: "6",
+
+                        title: 'Under the center of the earth',
+                        type: 'adventure',
+                        image: 'https://i.pinimg.com/originals/aa/5a/31/aa5a31ceeaa04ec91e3a2de2d5f0a6b8.jpg'
+                    },
+                    {
+                        id: "7",
+
+                        title: 'How to pray',
+                        type: 'deen',
+                        image: 'https://ihopeministries.org/wp-content/uploads/2019/05/manywomenpraying.jpg'
+
+                    },
+                    {
+                        id: "8",
+
+                        title: 'Knowing God',
+                        type: 'deen',
+                        image: 'https://cdn-prod.opendemocracy.net/media/images/Mohammed_kaaba_1315.width-800.jpg'
+
+                    }, {
+                        id: "9",
+
+                        title: 'Prophet Mohammed ',
+                        type: 'deen',
+                        image: 'https://cdn-prod.opendemocracy.net/media/images/Mohammed_kaaba_1315.width-800.jpg'
+
+                    },
+                    {
+                        id: "10",
+                        title: 'Lets eat',
+                        type: 'fun',
+                        image: 'https://guneykoresinemasi.com/uploads/fotos/diziler/lets-eat/filmafisi.jpg'
+
+                    },
+                    {
+                        id: "11",
+
+                        title: 'The Lemon Tree',
+                        type: 'fun',
+                        image: 'https://img.freepik.com/free-photo/bunch-fresh-ripe-lemons-lemon-tree_129475-22.jpg?size=626&ext=jpg'
+
+                    }, {
+                        id: "12",
+                        title: 'The Sleeping boy',
+                        type: 'popular',
+                        image: 'https://previews.123rf.com/images/wetnose/wetnose1303/wetnose130300013/18737588-boy-sleeping.jpg'
+
+                    },
+                ]
+                const filteredStories = sotries.filter(story => story.type === 'popular').forEach(el => {
+                    const element = document.getElementById('story-cards')
+                    if (element) {
+                        element.insertAdjacentHTML("beforeend",
+                            `<div class="story-card">
+            <img src=${el.image} />
+            <div class="cat-txt">
+                <h4 class="title-s">${el.title} </h4>
+                <div class="rating">
+                    <h4>4.5</h4>
+                    <img src="" />
+                </div>
+            </div>
+            <p class="description-s">دت الصغيرة المسكينة نفسها وحيدةً في الغابة، وكانة نفسها وحيدةً في الغابة،
+                وكانت خائفة نفسها وحيدةً في الغابة، وكانت خائفة نفسها وحيدةً في الغابة، وكانت خائفت خائفةً من
+                الأشجار الكثيفة، كما </p>
+                <a href=${'story.html?id=' + el.id} class="view" >
+            <input type="submit" name="watch" value="مشاهدة" />
+                    </a >
+        </div >`
+                        )
+                    }
+                })
+            }
+
+        })(window, document, undefined);
+
+    </script>
 
 </head>
+
 <body>
-  <header>
-  <div class="heads">
-  <div class="head1">
-    <img src="">
-    <h3>اسم امشروع</h3>
-    <div class="navbar1">
-    <ul>
-  <li><a href="home.html">الرئيسية</a></li>
-  <li><a href="popularstories.html">جميع القصص</a></li>
-  <li><a href="">تعرف علينا </a></li>
-  <li><a href="">اتصل بنا</a></li>
+    <header>
+        <div class="heads">
+            <div class="head1">
+                <img src="">
+                <h3>اسم امشروع</h3>
+                <div class="navbar1">
+                    <ul>
+                        <li><a href="">الرئيسية</a></li>
+                        <li><a href="">جميع القصص</a></li>
+                        <li><a href="">تعرف علينا </a></li>
+                        <li><a href="">اتصل بنا</a></li>
 
-  
-</ul></div>
 
-  <form action="login.html">
-    <input  id="log-in" type="submit" value="تسجيل الدخول " />
-   </form>
+                    </ul>
+                </div>
 
- <!--  <button id="log-in" >تسجيل الدخول</button> -->
-  </div>
-  <div class="head2">
-    <div class="navbar2">
-    <ul>
-  <li><a href="default.asp">مغامرات</a></li>
-  <li><a href="contact.asp">تعليمية</a></li>
-  <li><a href="news.asp">حيوانات</a></li>
-    <li><a href="default.asp">إنجليزية</a></li>
-    <li><a href="contact.asp">فكاهة</a></li>
-  <li><a href="news.asp">دينية</a></li>
-  <li><a href="about.asp">مشاركات الأصدقاء</a></li>
-</ul></div>
-    
-  </div></div>
-</header>
+                <button id="log-in">تسجيل الدخول</button>
+            </div>
+            <div class="head2">
+                <div class="navbar2">
+                    <ul>
 
-  <h5 class="title-t">القصص الأكثر شهرة</h5>
-	<div class="storycard" id="firstpart" >
-		<img src="">
-		<div class="cat-txt">
-		<h4 class="title-s">قصة بياض الثلج والأقزام السبعة</h4>
-		</div>
-		<p class="description-s">ديحكى أنه وفي قديم الزمان، كان هناك ملك وملكة شجاعان ومنصفان، رُزقا بفتاة جميلة، وكانت بشرة جسدها شديدة البياض؛ فلُقِّبت على إثرها بالأميرة بياض الثلج.
-وبعد بضعة أشهر، ماتت الملكة تاركة وراءها الأميرل</p>
-	</div>
-  <div class="storycard" id="storycardsec">
-    <img src="">
-    <div class="cat-txt">
-    <h4 class="title-s">قصة بياض الثلج والأقزام السبعة</h4>
-    </div>
-    <p class="description-s">ديحكى أنه وفي قديم الزمان، كان هناك ملك وملكة شجاعان ومنصفان، رُزقا بفتاة جميلة، وكانت بشرة جسدها شديدة البياض؛ فلُقِّبت على إثرها بالأميرة بياض الثلج.
-وبعد بضعة أشهر، ماتت الملكة تاركة وراءها الأميرل</p>
-  </div>
+                        <li><a href="category.html?category=adventures">مغامرات</a></li>
+                        <li><a href="category.html?category=educational">تعليمية</a></li>
+                        <li><a href="category.html?category=animals">حيوانات</a></li>
+                        <li><a href="category.html?category=english">إنجليزية</a></li>
+                        <li><a href="category.html?category=fun">فكاهة</a></li>
+                        <li><a href="category.html?category=deen">دينية</a></li>
+                        <li><a href="category.html?category=friends">مشاركات الأصدقاء</a></li>
+                    </ul>
+                </div>
 
-  <div class="secpart">
-  <h5 class="title-t" id="title-tt">القصص الأعلى مشاهدة </h5>
-  <div class="storycard">
-    <img src="">
-    <div class="cat-txt">
-    <h4 class="title-s">قصة بياض الثلج والأقزام السبعة</h4>
-    </div>
-    <p class="description-s">ديحكى أنه وفي قديم الزمان، كان هناك ملك وملكة شجاعان ومنصفان، رُزقا بفتاة جميلة، وكانت بشرة جسدها شديدة البياض؛ فلُقِّبت على إثرها بالأميرة بياض الثلج.
-وبعد بضعة أشهر، ماتت الملكة تاركة وراءها الأميرل</p>
-  </div>
-  <div class="storycard" id="storycardsec">
-    <img src="">
-    <div class="cat-txt">
-    <h4 class="title-s">قصة بياض الثلج والأقزام السبعة</h4>
-    </div>
-    <p class="description-s">ديحكى أنه وفي قديم الزمان، كان هناك ملك وملكة شجاعان ومنصفان، رُزقا بفتاة جميلة، وكانت بشرة جسدها شديدة البياض؛ فلُقِّبت على إثرها بالأميرة بياض الثلج.
-وبعد بضعة أشهر، ماتت الملكة تاركة وراءها الأميرل</p>
-  </div>
-</div></body>
+            </div>
+        </div>
+    </header>
+
+    <section id="stories">
+        <div class="section2">
+            <h5 class="title-t">القصص الأكثر شهرة</h5>
+            <div class="story-cards" id='story-cards'>
+    </section>
+
+    <!-- 
+        <div class="storycard" id="firstpart">
+            <img src="">
+            <div class="cat-txt">
+                <h4 class="title-s">قصة بياض الثلج والأقزام السبعة</h4>
+            </div>
+            <p class="description-s">ديحكى أنه وفي قديم الزمان، كان هناك ملك وملكة شجاعان ومنصفان، رُزقا بفتاة جميلة،
+                وكانت
+                بشرة جسدها شديدة البياض؛ فلُقِّبت على إثرها بالأميرة بياض الثلج.
+                وبعد بضعة أشهر، ماتت الملكة تاركة وراءها الأميرل</p>
+        </div>
+        <div class="storycard" id="storycardsec">
+            <img src="">
+            <div class="cat-txt">
+                <h4 class="title-s">قصة بياض الثلج والأقزام السبعة</h4>
+            </div>
+            <p class="description-s">ديحكى أنه وفي قديم الزمان، كان هناك ملك وملكة شجاعان ومنصفان، رُزقا بفتاة جميلة،
+                وكانت
+                بشرة جسدها شديدة البياض؛ فلُقِّبت على إثرها بالأميرة بياض الثلج.
+                وبعد بضعة أشهر، ماتت الملكة تاركة وراءها الأميرل</p>
+        </div>
+
+        <div class="secpart">
+            <h5 class="title-t" id="title-tt">القصص الأعلى مشاهدة </h5>
+            <div class="storycard">
+                <img src="">
+                <div class="cat-txt">
+                    <h4 class="title-s">قصة بياض الثلج والأقزام السبعة</h4>
+                </div>
+                <p class="description-s">ديحكى أنه وفي قديم الزمان، كان هناك ملك وملكة شجاعان ومنصفان، رُزقا بفتاة
+                    جميلة،
+                    وكانت بشرة جسدها شديدة البياض؛ فلُقِّبت على إثرها بالأميرة بياض الثلج.
+                    وبعد بضعة أشهر، ماتت الملكة تاركة وراءها الأميرل</p>
+            </div>
+            <div class="storycard" id="storycardsec">
+                <img src="">
+                <div class="cat-txt">
+                    <h4 class="title-s">قصة بياض الثلج والأقزام السبعة</h4>
+                </div>
+                <p class="description-s">ديحكى أنه وفي قديم الزمان، كان هناك ملك وملكة شجاعان ومنصفان، رُزقا بفتاة
+                    جميلة،
+                    وكانت بشرة جسدها شديدة البياض؛ فلُقِّبت على إثرها بالأميرة بياض الثلج.
+                    وبعد بضعة أشهر، ماتت الملكة تاركة وراءها الأميرل</p>
+            </div>
+        </div> -->
+</body>
+
 </html>

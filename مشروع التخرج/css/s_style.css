@@ -288,6 +288,7 @@ button {
 	background-color: white;
 	border-color: #F4775C;
 	border-width: 0.5px;
+    color: grey;
 	align-items: center;
 	justify-content: center;
 	display: inline;

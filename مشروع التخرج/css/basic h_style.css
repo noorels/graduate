@@ -229,9 +229,8 @@ float: left;
 
 .drawings img{
 	position: relative;
-		animation: shimmy 3s infinite;
-  	animation-direction: alternate;	
-	
+	animation: shimmy 3s infinite;
+  	animation-direction: alternate;		
 }
 
 
@@ -316,8 +315,8 @@ h3{
   height: 80px;
   font-size: 16px;
   padding-right: 15%;
-  animation: circle 3s infinite;
-  transform: rotate(0deg);
+  animation: circle 3s infinite; 
+  transform: rotate(0deg); 
 }
 
 #com-bst{
