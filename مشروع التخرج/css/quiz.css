@@ -1,0 +1,61 @@
+@font-face {
+  font-family: Cairo;
+  src: url(https://fonts.google.com/specimen/Cairo?subset=arabic);
+}
+
+#quiz {
+  background-image: url(../img/bg.png);
+  /* margin-left: 25%;
+  width: 700px;
+  height: 730px; */
+}
+
+.quiz-title {
+  text-align: center;
+  font-family: Cairo;
+  color: #f4775c;
+  font-weight: bolder;
+  font-size: 16px;
+}
+
+.firstques {
+  font-family: Cairo;
+  text-align: right;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.ques-one {
+  font-family: Cairo;
+  text-align: center;
+  font-weight: normal;
+  font-size: 16px;
+}
+.btn-group {
+  margin-left: 12%;
+}
+.btn {
+  border-radius: 50px;
+  cursor: pointer;
+  margin: 10px;
+  width: 45%;
+  font-family: Cairo;
+  font-size: 16px;
+  border: 1px solid #f4775c;
+  background-color: white;
+  color: black;
+}
+
+.answer {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
+  font-family: Cairo;
+  font-size: 16px;
+  width: 193px;
+  height: 40px;
+  background-color: #f4775c;
+  color: white;
+  border-radius: 20px;
+  border-color: #f4775c;
+}

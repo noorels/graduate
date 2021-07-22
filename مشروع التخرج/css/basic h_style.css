@@ -249,12 +249,11 @@ float: left;
  
 
 #steps{
-
 	background-image: url(../img/Home2.png) ;
+    background-repeat: no-repeat;
 	background-size: 100%;
 	height: 100%;
 	width: 100%;
-
 }
 
 .steps{
@@ -310,7 +309,7 @@ h3{
 }
 
 .letters img{
-		display:inline-block; 
+  display:inline-block; 
   float:right;
   height: 80px;
   font-size: 16px;
@@ -321,79 +320,100 @@ h3{
 
 #com-bst{
 	background-image: url(../img/Home3.png) ;
-	background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
 	height: 100%;
-	width: 100%;
 }
+
 @keyframes circle {
   0% {
-    transform: rotate();(0);
+    transform: rotate(0);
   }
   
   100% {
     transform: rotate(30deg);
   }
-
+}
 #comments{
-
 	height: 100%;
 	width: 100%;
-	}
+	
+}
+
 .title{
 	padding-right: 5%;
 
 }
+
 .comments{
-	height: 480px;
-		padding-top: 5%;
-	padding-right: 40%;
+	height: 500px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
 	
 }
 
 
 
 .comments-txt{
-	margin-top: 10%;
-	margin-right: -10%;
+    align-self: center;
+    display: flex;
 
 }
+
 .comment{
-	display:inline-block; 
-  float:right;
-  padding-right: 1%;
-  background-image: url(../img/cmnt1.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size:100%;
-  height: auto;
-  width: auto;
-  padding: 5%;
+display: flex;
+flex:1;
+box-shadow: -2px 5px 10px #AAAAAA;
+background:#fff9e1;
+border-radius: 40px;
+padding: 10px;
+font-size: 14px;
+justify-content: center;
+align-items: center;
+margin: 10px
 
 }
 
 .comment1{
-		 display:inline-block; 
-  float:right;
+  display:flex; 
+  flex-direction: column;
 }
 
-.comment2{
-		 display:inline-block; 
-  float:right;
-}
-
-#best-viewrs{
-	height: 490px;
-}
 
 .best-viewrs{
-
+    background:#fff9e1;
+ 
 }
+
+
 
 .best-viewrs h3{
+    margin-top: 0;
+    margin-bottom: 0;
 	padding-right: 39%;
-	padding-top: 6.5%;
 }
 
+.photos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:#fff9e1;
+    padding-bottom: 10px;
+}
+
+.photos img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin: 10px 30px;
+    margin-top: 20px;
+    border-radius: 20px;
+}
 
 
 

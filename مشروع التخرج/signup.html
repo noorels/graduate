@@ -1,144 +1,132 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta charset="utf-8">
-	<title>Sign In</title>
-	<script type="text/javascript" src="js/signin.js">
-
-// (function(window, document, undefined){
-
-// // code that should be taken care of right away
-
-// window.onload = init;
-//   function init(){
-//     var name = document.getElementById('username');
-// 	var email = document.getElementById('email');
-// 	var password = document.getElementById('password');
-// 	var sumbit = document.getElementById('sumbit');
-// 	console.log(sumbit)
-// 	if (sumbit){
-//  		sumbit.addEventListener('click',
-//   	function() {
-//   		var username = name.value;
-//   		var emailText = email.value;
-//   	console.log(username)
-//  	});
-//  	}
- 
-//   }
- 
-// })(window, document, undefined);
+    <meta charset="utf-8">
+    <title>Sign In</title>
+    <script type="text/javascript" src="js/signin.js">
 
 
 
 
-	</script>
-	<link href='https://fonts.googleapis.com/css?family=Cairo' rel='stylesheet'>
-	<style type="text/css">
- 
-	body{
-		padding:0 0 0 0;
-		margin: 0 0 0 0;
-	}
 
-	.firstpage{
-			display:flex;
-			height:657px;
 
-	}
-	.login{
-		background-color: #FFF9E2;
-		width:1170px;
-		padding-top:100px;
-		text-align: center;
+    </script>
+    <link href='https://fonts.googleapis.com/css?family=Cairo' rel='stylesheet'>
+    <style type="text/css">
+        body {
+            padding: 0 0 0 0;
+            margin: 0 0 0 0;
+        }
 
-	}
-	.imglogin{
-		background-color:#C9E8C4;
-		width:750px;
-	}
-	.img{
-		width:180%;
-		height: outo;
-		display: block;
-		padding-left: 140px;
-		padding-top:225px ;
-			}
-	.txtf{
-		font-family: Cairo ;
-		border: 0px solid;
-		width:250px;
-		padding-bottom:4px;
-		height:30px;
-		margin-bottom: 10px;
-		padding-right: 10px;
-	}
-	h3{
-		color: #F4775C;
-		font-family: Cairo;
-		font-size:16px;
-  		font-weight:600;
-  		margin-bottom: 0px;
+        .firstpage {
+            display: flex;
+            height: 657px;
 
-	}
-	h4{
-		font-style: ;
-		font-family: Cairo;
-		font-weight:300;
-		font-size: 12px;
-		padding-top: 2px;
-		margin-top: 0px;
+        }
 
-	}
-	::placeholder{
-		font-size: 10px;
-		text-align: right;
-	}
+        .login {
+            background-color: #FFF9E2;
+            width: 1170px;
+            padding-top: 100px;
+            text-align: center;
 
-	.submit-btn{
-		background-color: #F4775C;
-		border: none;
-		color: white;
-		font-family: Cairo;
-		width:250px;
-		height:35px;
-		padding:4px;
-		font-size: 10px;
-	}
-	
-	.txt{
-	font-family: Cairo;
-	display: inline-block;
-	font-size:10px;
-	font-weight:400;
-	margin-top: 5px;
-	
-	}
-	.txt1{font-family: Cairo;
-		font-size:10px;
-		padding-left:110px;
-	}
-	
-</style>
+        }
+
+        .imglogin {
+            background-color: #C9E8C4;
+            width: 750px;
+        }
+
+        .img {
+            width: 180%;
+            height: outo;
+            display: block;
+            padding-left: 140px;
+            padding-top: 225px;
+        }
+
+        .txtf {
+            font-family: Cairo;
+            border: 0px solid;
+            width: 250px;
+            padding-bottom: 4px;
+            height: 30px;
+            margin-bottom: 10px;
+            padding-right: 10px;
+        }
+
+        h3 {
+            color: #F4775C;
+            font-family: Cairo;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 0px;
+
+        }
+
+        h4 {
+            font-style: ;
+            font-family: Cairo;
+            font-weight: 300;
+            font-size: 12px;
+            padding-top: 2px;
+            margin-top: 0px;
+
+        }
+
+        ::placeholder {
+            font-size: 10px;
+            text-align: right;
+        }
+
+        .submit-btn {
+            background-color: #F4775C;
+            border: none;
+            color: white;
+            font-family: Cairo;
+            width: 250px;
+            height: 35px;
+            padding: 4px;
+            font-size: 10px;
+        }
+
+        .txt {
+            font-family: Cairo;
+            display: inline-block;
+            font-size: 10px;
+            font-weight: 400;
+            margin-top: 5px;
+
+        }
+
+        .txt1 {
+            font-family: Cairo;
+            font-size: 10px;
+            padding-left: 110px;
+        }
+    </style>
 </head>
-<body>
-<div class="firstpage">
-	<div class="imglogin">
 
-	<div class="img"><img src="img\signin.png" width="25%" height="10%"></div>
-	</div> 
-	<div class="login">
- 	<h3>مرحبا بك في موقع غراب البين</h3>
-	<h4>تسجيل الدخول </h4>
-	<form action="home.html" method="post">
-	<input name="username" type="text" class="txtf" placeholder="اسم مستخدم" ><br>
-	<input name="email" type="email" class="txtf"  placeholder="البريد الالكتروني"><br>
-	<input name="password" type="password" class="txtf"  placeholder="كلمة المرور"><br>
-  	<button  class="submit-btn" type="submit"> تسجيل الدخول </button>
-  	</form>
- 	<a href="login.html" class="txt1">سجل الآن</a>
-	<h6 class="txt">إذا كنت تملك حساب  ؟</h6>
-	</div>
-</div>
+<body>
+    <div class="firstpage">
+        <div class="imglogin">
+
+            <div class="img"><img src="img\signin.png" width="25%" height="10%"></div>
+        </div>
+        <div class="login">
+            <h3>مرحبا بك في موقع غراب البين</h3>
+            <h4>تسجيل الدخول </h4>
+            <form action="home.html" method="post">
+                <input name="username" type="text" class="txtf" placeholder="اسم مستخدم"><br>
+                <input name="email" type="email" class="txtf" placeholder="البريد الالكتروني"><br>
+                <input name="password" type="password" class="txtf" placeholder="كلمة المرور"><br>
+                <button class="submit-btn" type="submit"> تسجيل الدخول </button>
+            </form>
+            <a href="login.html" class="txt1">سجل الآن</a>
+            <h6 class="txt">إذا كنت تملك حساب ؟</h6>
+        </div>
+    </div>
 </body>
+
 </html>

@@ -284,16 +284,7 @@ button {
 }
 
 /*quiz design*/
-.Quiz-page button{
-	background-color: white;
-	border-color: #F4775C;
-	border-width: 0.5px;
-    color: grey;
-	align-items: center;
-	justify-content: center;
-	display: inline;
-	clear: both;
-}
+
 .section1 section2 {
 	display: inline;
  	float: right;
@@ -315,8 +306,11 @@ button {
  
 
 .modal-contents {
-	height: 300px;
+    max-height: 80%;
+    overflow-y: scroll;
 	width: 500px;
+    justify-content: center;
+    align-items: center;
 	background-color: white	;
 	text-align: center;
 	padding: 20px;
@@ -330,9 +324,8 @@ button {
 	position: absolute;
 	top: 0;
 	right: 10px;
-	font-size: 42px;
+	font-size: 15px;
 	color: #333;
-	transform: rotate(45deg);
 	cursor: pointer;
 	&:hover {
 		color: #666;

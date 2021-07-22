@@ -4,6 +4,9 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/s_style.css">
+    <link rel="stylesheet" href="css/quiz.css">
+    <script type="text/javascript" src="js/storiesList.js"></script>
+
     <!-- 	<script type="text/javascript" src="js/Modal.js"></script>
  -->
     <link href='https://fonts.googleapis.com/css?family=Cairo' rel='stylesheet'>
@@ -19,6 +22,8 @@
                 var el = document.getElementById('Quiz');
                 el.addEventListener('click',
                     function () {
+                        window.scrollTo(0, 0)
+                        document.getElementById('quiz').style.display = "block"
                         document.getElementById('bg-modal').style.display = "flex";
                     });
 
@@ -34,120 +39,38 @@
 
                 const urlSearchParams = new URLSearchParams(window.location.search);
                 const params = Object.fromEntries(urlSearchParams.entries());
-                const sotries = [
-                    {
-                        id: "1",
-                        title: 'Tiger',
-                        type: 'animals',
-                        text: 'This is an amazing animals story in english. Once upon a time, an eagle befriended a fox. Soon both of them became extremely close. They became so close that they decided to build homes next to each other. As a result, the eagle built its nest near the bushes where the fox lived. ',
-                        image: 'https://static01.nyt.com/images/2019/05/07/science/06SCI-TIGER1/03SCI-TIGER1-superJumbo.jpg',
-                        questions: [{
-                            id: "1",
-                            question: 'who is the main character',
-                            options: ['tiger', 'memo', 'seirra', 'don'],
-                            answer: 'tiger'
-                        },
-                        {
-                            id: "2",
-                            question: 'who is the main character',
-                            options: ['tiger', 'memo', 'seirra', 'don'],
-                            answer: 'tiger'
-                        }]
-                    },
-                    {
-                        id: "2",
-                        title: 'Cat',
-                        type: 'animals',
-                        image: 'https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png'
 
-                    }, {
-                        id: "3",
+                // جيب الستوري اللي موجود رقمها في الرابط فوق وحط بياناتهاا
+                const story = sotries.find(story => story.id === params.id);
+                const storyText = document.getElementById('story-txt')
+                const storyTitle = document.getElementById('story-title')
 
-                        title: 'Lion',
-                        type: 'animals',
-                        image: 'https://i.pinimg.com/originals/1c/2f/52/1c2f52962906d49ee2c3359a23de64e1.jpg'
+                storyText.innerHTML = story.text;
+                storyTitle.innerHTML = story.title;
 
 
-                    }, {
-                        id: "4",
+                // جيب اسالة الستوري علشان نحطها بالمودال وصفر قيمة العلامة
+                const questions = story.questions
+                var mark = 0
+                const totalmark = questions?.length
 
-                        title: 'Going to sea',
-                        type: 'adventure',
-                        image: 'https://jooinn.com/images/sea-136.jpg'
-
-                    },
-                    {
-                        id: "5",
-
-                        title: 'Fight the sharks',
-                        type: 'adventure',
-                        image: 'https://media.npr.org/assets/img/2020/08/13/gettyimages-173288562_wide-46c4fa466f2ea7bed1615ef893500b9aa3b8d100.jpg?s=1400'
-
-                    },
-                    {
-                        id: "6",
-
-                        title: 'Under the center of the earth',
-                        type: 'adventure',
-                        image: 'https://i.pinimg.com/originals/aa/5a/31/aa5a31ceeaa04ec91e3a2de2d5f0a6b8.jpg'
-                    },
-                    {
-                        id: "7",
-
-                        title: 'How to pray',
-                        type: 'deen',
-                        image: 'https://ihopeministries.org/wp-content/uploads/2019/05/manywomenpraying.jpg'
-
-                    },
-                    {
-                        id: "8",
-
-                        title: 'Knowing God',
-                        type: 'deen',
-                        image: 'https://cdn-prod.opendemocracy.net/media/images/Mohammed_kaaba_1315.width-800.jpg'
-
-                    }, {
-                        id: "9",
-
-                        title: 'Prophet Mohammed ',
-                        type: 'deen',
-                        image: 'https://cdn-prod.opendemocracy.net/media/images/Mohammed_kaaba_1315.width-800.jpg'
-
-                    },
-                    {
-                        id: "10",
-                        title: 'Lets eat',
-                        type: 'fun',
-                        image: 'https://guneykoresinemasi.com/uploads/fotos/diziler/lets-eat/filmafisi.jpg'
-
-                    },
-                    {
-                        id: "11",
-
-                        title: 'The Lemon Tree',
-                        type: 'fun',
-                        image: 'https://img.freepik.com/free-photo/bunch-fresh-ripe-lemons-lemon-tree_129475-22.jpg?size=626&ext=jpg'
-
-                    }, {
-                        id: "12",
-                        title: 'The Sleeping boy',
-                        type: 'fun',
-                        image: 'https://previews.123rf.com/images/wetnose/wetnose1303/wetnose130300013/18737588-boy-sleeping.jpg'
-
-                    },
-                ]
-
+                // to show the mark after answering - لما تضغط على تسليم الاجابات
                 function showMark() {
-                    document.getElementById('quiz-list').style.display = "none"
+                    document.getElementById('quiz').style.display = "none"
                     const markElement = document.createElement('div')
                     const marks = document.getElementById('marks')
-                    markElement.innerText = `Your mark is ${mark}/${totalmark}`
+                    markElement.innerText = `علامتك هي ${mark}/${totalmark}`
                     marks.appendChild(markElement)
                     saveAnswers.style.display = "none"
 
                 }
+
+
+                // زر تسليم الاجابات
                 const saveAnswers = document.getElementById('save-answers')
                 saveAnswers.onclick = function () { showMark() };
+
+                // عملية الضغط علي الاجابة عشان تعرف صح او غلط
                 function onOptionClick(value, questionId) {
                     const question = questions.find(q => q.id === questionId)
                     const questionElement = document.getElementById('opt-' + questionId + '-' + value)
@@ -173,31 +96,26 @@
                     }
                 }
 
-                const story = sotries.find(story => story.id === params.id);
-                const storyText = document.getElementById('story-txt')
-                const storyTitle = document.getElementById('story-title')
-
-
-                storyText.innerHTML = story.text;
-                storyTitle.innerHTML = story.title;
-
-                const questions = story.questions
-                var mark = 0
-                const totalmark = questions.length
-                questions.forEach(q => {
-                    const quizList = document.getElementById('quiz-list')
+                // هنا نقوم باضافة الاسئلة وخيارتها
+                // add questions to page
+                questions.forEach((q, index) => {
+                    const quizList = document.getElementById('quiz')
                     const question = document.createElement('div')
                     question.id = q.id
-                    question.className = "first-qus"
-                    question.insertAdjacentHTML("beforeend", `<div>${q.question}</div>`)
+                    question.className = "firstques"
+                    question.insertAdjacentHTML("beforeend", `<h4>${index + 1} السوال رقم</h4> <h5 class="ques-one">${q.question}</h5>`)
+                    const optionsGroup = document.createElement('div')
+                    optionsGroup.className = 'btn-group'
                     q.options.forEach(op => {
                         const option = document.createElement('button')
                         option.id = 'opt-' + q.id + '-' + op
+                        option.className = 'btn'
                         option.value = op
                         option.innerText = op
                         option.onclick = function () { onOptionClick(op, q.id) };
-                        question.appendChild(option)
+                        optionsGroup.appendChild(option)
                     })
+                    question.appendChild(optionsGroup)
                     quizList.appendChild(question)
                 })
 
@@ -232,7 +150,7 @@
             <div class="navbar2">
                 <ul>
 
-                    <li><a href="category.html?category=adventures">مغامرات</a></li>
+                    <li><a href="category.html?category=adventure">مغامرات</a></li>
                     <li><a href="category.html?category=educational">تعليمية</a></li>
                     <li><a href="category.html?category=animals">حيوانات</a></li>
                     <li><a href="category.html?category=english">إنجليزية</a></li>
@@ -260,7 +178,6 @@
                 <p>تمتع بالاستماع إليها </p>
             </div>
 
-
             <div class="story">
                 <h2 class="s-title" id="story-title">بياض الثلج</h2>
                 <div class="views">
@@ -271,20 +188,7 @@
                     <p class="title">التقييم:</p>
                     <p class="rating-num">4.0</p>
                 </div>
-
-
-                <p class="story-txt" id="story-txt"> دت الصغيرة المسكينة نفسها وحيدةً في الغابة، وكانت خائفةً من الأشجار
-                    الكثيفة، كما
-                    هابت هجوم الحيوانات المفترسة عليها، ولم يكن منها إلا أن بدأت بالركض فوق الحصى الحاد والصخور
-                    المدبّبة، وبين الغصون والأشواك، كما أن حيوانات بريّة أخذت تقفز حولها من هنا وهناك ولكن دون أن
-                    تؤذيها، فأطلقت بياض الثلج ساقيها للريح راكضةً بأسرع ما تستطيع، وبقيت هكذا إلى أن اقترب حلول المساء،
-                    وعندئذٍ رأت بياض الثلج كوخاً صغيراً، فقرّرت أن تدخله لتأخذ قسطاً من الراحة.[٤] سرعان ما لفت انتباه
-                    بياض الثلج الحجم الصغير لكل شيءٍ في الكوخ، فالملاعق والكؤوس والأواني والأثاث كلّها كانت صغيرة، وفي
-                    الوقت نفسه كانت مرتّبةً ونظيفًة أيُّما ترتيب ونظافة. وعلى الطاولة في المطبخ وُضعت سبعة صحون، على كل
-                    صحنٍ منها ملعقةٌ صغيرةٌ وسكينٌ وشوكةٌ، بالإضافة إلى سبعة أكوابٍ؛ كل كوب منها وضع بشكل مرتّب إلى جانب
-                    صحن. وفي الجهة المقابلة للمطبخ، كانت هناك سبعة أسرّةٍ صغيرةٍ تصطفّ إلى جانب الحائط مغطّاةٌ بشراشف
-                    ناصعة البياض.[١] كانت بياض الثلج في تلك اللحظة تتضور جوعاً وعطشاً، فلم تقاوم منظر ورائحة الخبز
-                    والخضار التي في الصحون، فأكلت منها قليلاً، وشربت عصير العنب؛ رشفةً من كل كوب، ثم ألقت بنف</p>
+                <p class="story-txt" id="story-txt"></p>
                 <button id="Quiz" class="button">قم بتقديم اختبار</button>
             </div>
 
@@ -298,24 +202,15 @@
     <!-- Modal section -->
     <div id="bg-modal">
         <div class="modal-contents">
-            <title>اختبار قصير </title>
-
-            <div class="Quiz-page" id="quiz-list">
+            <div id="close">X</div>
+            <h4 class="quiz-title">اختبار قصير </h4>
+            <hr style=" box-shadow: -2px 5px 10px #AAAAAA;">
+            <div id="quiz">
             </div>
-            <div class="save" id="marks">
-                <button id="save-answers">تسليم الاجابات </button>
-            </div>
-
-
-            <div id="close">+</div>
-
-            <form action="">
-
-            </form>
-
-
-
+            <div id="marks"></div>
+            <button id="save-answers" class="answer"> تسليم الإجابات </button>
         </div>
+    </div>
     </div>
 
 
