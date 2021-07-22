@@ -52,7 +52,7 @@
                 // جيب اسالة الستوري علشان نحطها بالمودال وصفر قيمة العلامة
                 const questions = story.questions
                 var mark = 0
-                const totalmark = questions?.length
+                const totalmark = questions?.length || 0
 
                 // to show the mark after answering - لما تضغط على تسليم الاجابات
                 function showMark() {
